@@ -1,4 +1,4 @@
-# currency-rate [![npm version](https://badge.fury.io/js/currency-rate-by-period.svg)](https://badge.fury.io/js/currency-rate-by-period)
+# currency-rate-by-period [![npm version](https://badge.fury.io/js/currency-rate-by-period.svg)](https://badge.fury.io/js/currency-rate-by-period)
 
 기간별 환율 정보를 가져옵니다.
 
