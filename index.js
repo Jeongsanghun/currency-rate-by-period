@@ -1,6 +1,13 @@
 var axios = require('axios')
 var urlArr = ['https://api.exchangeratesapi.io/history', 'https://api.exchangeratesapi.io/latest']
 
+/**
+ *
+ * @param {String} base
+ * @param {String} target
+ * @param {Array<Date>} dateRange
+ * @returns {Boolean}
+ */
 function validator(base, target, dateRange) {
     var now = new Date()
     var nowDate = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
@@ -15,7 +22,13 @@ function validator(base, target, dateRange) {
     return isCurrency && beforeNow
 }
 
-
+/**
+ *
+ * @param {String} base
+ * @param {String} target
+ * @param {Array<Date>} dateRange
+ * @returns {Promise<Object>}
+ */
 function getCurrency(base, target, dateRange) {
     var url = `${urlArr[1]}`
     if (!validator(base, target, dateRange)) {
@@ -38,6 +51,11 @@ function getCurrency(base, target, dateRange) {
     })
 }
 
+/**
+ *
+ * @param {Object} data
+ * @param {String} target
+ */
 function makeArr(data, target) {
     var results = []
     for (let date in data.rates) {
@@ -72,7 +90,6 @@ function getSummary(data) {
         return p
     }, {})
 }
-console.log('start')
 module.exports = {
     validator,
     getCurrency,
