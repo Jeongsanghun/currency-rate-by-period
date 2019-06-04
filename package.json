@@ -1,6 +1,6 @@
 {
   "name": "currency-rate-by-period",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "기간별 환율정보를 가져와서 요약을 합니다.",
   "repository": "Jeongsanghun/currency-rate",
   "main": "index.js",
