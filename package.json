@@ -1,0 +1,17 @@
+{
+  "name": "currency-rate",
+  "version": "1.0.0",
+  "description": "기간별 환율정보를 가져와서 요약을 합니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
