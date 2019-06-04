@@ -53,21 +53,27 @@ function getCurrency(base, target, dateRange) {
 
 /**
  *
- * @param {Object} data
+ * @param {Object} data : getCurrency
  * @param {String} target
  */
 function makeArr(data, target) {
     var results = []
-    for (let date in data.rates) {
-        results.push([date, data.rates[date][target]])
+    var response = data.data
+    console.log(response)
+    for (let date in response.rates) {
+        results.push([date, response.rates[date][target]])
     }
     return results.sort(function (a, b) {
-        return new Date(a[0]) - new Date(b[0])
+        return (new Date(a[0])).getTime() - (new Date(b[0])).getTime()
     }).map(v => {
         return [v[0], v[1]]
     })
 }
 
+/**
+ *
+ * @param {Object} data : makeArr
+ */
 function getSummary(data) {
     if (!data) {
         return
@@ -90,6 +96,7 @@ function getSummary(data) {
         return p
     }, {})
 }
+
 module.exports = {
     validator,
     getCurrency,

@@ -21,7 +21,7 @@ cr.getCurrency(base,target,dateRange).then((res)=>{
     console.log(res.data)
 
     // 배열
-    var arr = cr.makeArr(res.data,"USD")
+    var arr = cr.makeArr(res,"USD")
     console.log(arr)
 
     // 요약
